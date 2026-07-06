@@ -106,12 +106,18 @@ export const projects = [
       'Mapped conversation flows for behavioral, technical, and system design interviews.',
       'Designed a feedback loop to improve coaching quality through structured prompts and study plans.',
     ],
+    targetAudience: [
+      'Software Engineers preparing for technical interviews',
+      'Computer Science students seeking structured interview practice',
+      'Career changers transitioning into software engineering',
+      'Professionals preparing for Java, System Design, and Behavioral interviews',
+    ],
     images: ['https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80'],
     github: 'https://github.com/your-username/interview-assistant',
     liveDemo: 'https://your-demo-url.com',
     blog: 'https://your-blog-url.com',
     screenshots: ['Mock interview flow', 'Behavioral coaching', 'Study roadmap'],
     reflection:
-      'The project reinforced the importance of combining thoughtful product design and LLM-driven experiences to build useful, trustworthy tools.',
+      'Building this AI Interview Preparation Assistant allowed me to explore how generative AI can provide personalized, conversational coaching for technical interviews. Through multiple rounds of prompt engineering, testing, and refinement, I improved the assistant’s ability to conduct realistic mock interviews, generate customized study plans, and provide structured feedback. In future iterations, I plan to integrate voice-based interactions, Retrieval-Augmented Generation (RAG) for company-specific interview preparation, and analytics to provide deeper insights into interview performance.',
   },
 ] as const;

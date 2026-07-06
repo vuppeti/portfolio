@@ -1,4 +1,5 @@
 import { ArrowTopRightOnSquareIcon, CodeBracketIcon, PhotoIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
 import { Section } from '../ui/Section';
 import { Card } from '../ui/Card';
 import { projects } from '../../data/portfolioData';
@@ -39,6 +40,30 @@ export function ProjectsSection() {
                 ))}
               </div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35 }}
+              className="mt-8 space-y-6"
+            >
+              <div className="rounded-[1.5rem] border border-slate-800 bg-slate-950/70 p-6">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Target Audience</h4>
+                <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-400">
+                  {project.targetAudience.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-sky-400" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-[1.5rem] border border-slate-800 bg-slate-950/70 p-6">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Project Reflection</h4>
+                <p className="mt-4 text-sm leading-7 text-slate-400">{project.reflection}</p>
+              </div>
+            </motion.div>
           </div>
 
           <div className="space-y-6">
